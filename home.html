@@ -1,0 +1,7 @@
+<div class="container" id="feed"></div>
+<script src="js/main.js"></script>
+<script>
+  fetch('php/get_feed.php')
+.then(res => res.text())
+.then(data => document.getElementById('feed').innerHTML = data);
+</script>
