@@ -1,0 +1,7 @@
+<div class="container" id="profile"></div>
+<script>
+  const username = new URLSearchParams(window.location.search).get('user');
+  fetch(`php/get_profile.php?user=${username}`)
+.then(res => res.text())
+.then(data => document.getElementById('profile').innerHTML = data);
+</script>
